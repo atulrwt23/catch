@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>BOUNCE</title>
+    <style>
+      * {
+        background-color: antiquewhite;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-around;
+        height: 90vh;
+        width: 100vw;
+        border-bottom: 2px solid black;
+      }
+
+      .ball {
+        height: 6vh;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: black;
+        animation-name: ball;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+      }
+
+      .ball:hover {
+        animation-play-state: paused;
+      }
+
+      @keyframes ball {
+        0% {
+          transform: translate(0%);
+        }
+
+        100% {
+          transform: translateY(-85vh);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>CATCH THE BALL</h1>
+    <div class="container">
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+      <div class="ball"></div>
+    </div>
+  </body>
+</html>
